@@ -5,13 +5,15 @@
  */
 
 import React from 'react';
-import { AppRegistry, Text } from 'react-native';
-import Header from './src/components/header';
+import { AppRegistry, View } from 'react-native';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
-const App = () => {
-  return (
-      <Text>Hi There ! </Text>
-  );
-};
+const App = () => (
+  <View style={{ flex: 1, paddingBottom: 5 }} >
+    <Header headerText={'Albums'} />
+    <AlbumList />
+  </View>
+);
 
 AppRegistry.registerComponent('albums', () => App);
