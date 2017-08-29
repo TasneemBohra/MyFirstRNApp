@@ -4,7 +4,8 @@ import { Text, View, Image, Linking } from 'react-native'; // Destructured impor
 import Card from './Card';
 import CardItem from './CardItem';
 import Button from './Button';
-
+import Swiper from './swiper/Swiper';
+//<Image source={{ uri: image }} style={styles.imageStyle} />
 // Make a Component
 const AlbumDetail = ({ album }) => {
   const { title, artist, thumbnail_image, image, url } = album;
@@ -21,7 +22,7 @@ const AlbumDetail = ({ album }) => {
       </CardItem>
 
       <CardItem>
-        <Image source={{ uri: image }} style={styles.imageStyle} />
+        <Swiper images={[image, image, image]} />
       </CardItem>
 
       <CardItem>
@@ -57,9 +58,8 @@ const styles = {
     borderWidth: 1
   },
   imageStyle: {
-    height: 300,
     flex: 1,
-    width: null
+    height: 400
   }
 };
 
